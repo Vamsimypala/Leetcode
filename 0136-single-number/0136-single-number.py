@@ -1,3 +1,6 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        return functools.reduce(operator.xor, nums)
+        v=set(nums)
+        for i in v:
+            if nums.count(i)==1:
+                return i
